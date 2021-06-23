@@ -28,6 +28,8 @@ var game = {
     "loaded" : function () {
         me.pool.register("player", game.Player);
         me.pool.register("enemy", game.Enemy);
+        me.pool.register("laser", game.Laser);
+    	//me.pool.register("enemyLaser", game.EnemyLaser);
 
         me.state.set(me.state.MENU, new game.TitleScreen());
         me.state.set(me.state.PLAY, new game.PlayScreen());
