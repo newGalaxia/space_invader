@@ -13,9 +13,9 @@ game.EnemyManager = me.Container.extend({
     this.onChildChange = function () {
       this.updateChildBounds();
 
-      // if (this.children.length === 0) {
-      //   this.playscreen.reset();
-      // }
+      if (this.children.length === 0) {
+        this.playscreen.reset();
+      }
     };
   },
   update: function (time) {
@@ -48,7 +48,7 @@ game.EnemyManager = me.Container.extend({
     this.updateChildBounds();
   },
   createEnemies: function () {
-    //this.createdEnemies = true;
+    this.createdEnemies = true;
     for (var i = 0; i < this.COLS; i++) {
       for (var j = 0; j < this.ROWS; j++) {
         this.addChild(me.pool.pull("enemy", i * 64, j * 64));
