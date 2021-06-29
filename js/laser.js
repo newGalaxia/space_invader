@@ -27,7 +27,6 @@ game.Laser = me.Entity.extend({
 
         this.body.update();
         me.collision.check(this);
-
         return true;
     },
     onCollision : function (res, other) {

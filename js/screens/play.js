@@ -30,7 +30,6 @@ game.PlayScreen = me.Stage.extend({
     me.input.unbindKey(me.input.KEY.SPACE);
   },
   checkIfLoss: function (y) {
-    console.log('toto', y, this.player.pos.y)
     if (y >= this.player.pos.y) {
       this.reset();
     }
