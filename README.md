@@ -1,17 +1,14 @@
 melonJS boilerplate
 -------------------------------------------------------------------------------
 
-Sample project featuring :
-- WebGL1 as default renderer
-- Video autoscaling
-- Mobile optimized HTML/CSS
-- Swiping disabled on iOS devices
-- Debug Panel (if #debug)
-- Default icons
-- asset file (resources.js) automatic generation
+features :
+- video autoscaling
+- mobile optimized HTML/CSS
+- swiping disabled on iOS devices
+- debug Panel (if #debug)
+- default icons
 - distribution build
-- Standalone build for desktop operating systems
-- ES5 & ES6 shim for non compliant browser (see index.html)
+- standalone build for desktop operating systems
 
 ## To run distribution
 
@@ -21,11 +18,15 @@ To build, be sure you have [node](http://nodejs.org) installed. Clone the projec
 
 Then in the cloned directory, simply run:
 
-    [sudo] npm install
+    npm install
+
+You must also have `grunt-cli` installed globally:
+
+    npm install -g grunt-cli
 
 Running the game:
 
-	npm run serve
+	grunt serve
 
 And you will have the boilerplate example running on http://localhost:8000
 
@@ -33,7 +34,7 @@ And you will have the boilerplate example running on http://localhost:8000
 
 To build:
 
-    npm run build
+    grunt
 
 This will create a `build` directory containing the files that can be uploaded to a server, or packaged into a mobile app.
 
@@ -41,7 +42,7 @@ This will create a `build` directory containing the files that can be uploaded t
 
 Building a standalone desktop release:
 
-    npm run dist
+    grunt dist
 
 Running the desktop release on Windows:
 
@@ -57,8 +58,6 @@ Running the desktop release on Linux:
 
 Note that you may have to edit the file `Gruntfile.js` if you need to better dictate the order your files load in. Note how by default the game.js and resources.js are specified in a specific order.
 
-> Note: by default the boilerplate will use the latest version of melonJS available on NPM, when deploying be sure to specify the version the game has been developed and tested against (e.g. updating the url in the [index.html](https://github.com/melonjs/boilerplate/blob/master/index.html#L27) file to specify the 8.0.1 version : https://cdn.jsdelivr.net/npm/melonjs@8.0.1/dist/melonjs.min.js). Also when used on production, it is strongly advised to remove the debug panel [preload](https://github.com/melonjs/boilerplate/blob/master/index.html#L30).
-
 -------------------------------------------------------------------------------
-Copyright (C) 2011 - 2020 Olivier Biot
+Copyright (C) 2011 - 2015 Olivier Biot, Jason Oster, Aaron McLeod
 melonJS is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php)
